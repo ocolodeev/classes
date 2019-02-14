@@ -15,6 +15,9 @@ Create a function that finds Greatest common divisor for 2 input numbers.
 The greatest common divisor (gcd) of two or more integers, which are not all zero, is the largest positive integer that divides each of the integers. For example, the gcd of 8 and 12 is 4.
 
 5. Fibonacci number
-Create a function that checks if a number is Fibonacci number and using the function check how many Fibonacci numbers exist within a range (from min=0 to max=1000).
+Create 3 functions:
+1. A function that returns Nth Fibonacci number - use loops
+2. A function that returns Nth Fibonacci number - use recursion
+3. A function that check if a number is Fibonacci number and using the function check how many Fibonacci numbers exist within a range (from min=0 to max=1000).
 Fibonacci numbers called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
 
