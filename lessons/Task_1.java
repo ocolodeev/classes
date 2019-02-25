@@ -32,7 +32,7 @@ public class Task_1{
 
         long endTime = System.currentTimeMillis();
         long seconds = (endTime - startTime)/1000;
-        System.out.println( seconds);
+        System.out.println("Execution duration (sec): " + seconds);
 
         System.out.println("In range " + min + " - " + max + " are " + count + " prime numbers.");
 

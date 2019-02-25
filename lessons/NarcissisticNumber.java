@@ -7,11 +7,11 @@ public class NarcissisticNumber {
         int m = xStr.length();
         int sum = 0;
         int k = 1;
+
         for (int j=0; j<m; j++){
-
             sum +=(int) Math.pow(Integer.parseInt(xStr.substring(j,k++)), m);
-
         }
+
         return sum == x;
     }
 
@@ -21,11 +21,18 @@ public class NarcissisticNumber {
         int max = 10000;
         int count = 0;
 
+        long startTime = System.currentTimeMillis();
+
         for(int i=min; i<max; i++){
             if(isNarcissisticNumber(i)){
                 System.out.print(i + " ");
                 count++;
             }
         }
+
+        long endTime = System.currentTimeMillis();
+        long seconds = (endTime - startTime)/1000;
+        System.out.println("\nExecution duration (sec): " + seconds);
+        System.out.println("In range " + min + " - " + max + " are " + count + " narcissistic numbers.");
     }
 }
