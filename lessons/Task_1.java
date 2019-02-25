@@ -1,38 +1,42 @@
+public class Task_1{
 
-import java.util.Scanner;
+    public static boolean isPrimeNumber(int i){
 
-public class Task_1 {
-    public static void main() {
-        Scanner scanner = new Scanner(System.in);
+        boolean res = true;
 
-        System.out
-                .println("Enter the number till which the prime numbers are to be calculated: ");
-        int input = scanner.nextInt();
-
-        int count = 0;
-
-        // loop through the numbers one by one
-        for (int i = 2; i < input; i++) {
-
-            boolean isPrimeNumber = true;
-
-            // check to see if the number is prime
-            for (int j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    isPrimeNumber = false;
-                    break; // exit the inner for loop
-                }
-            }
-
-            // print the number if prime
-            if (isPrimeNumber) {
-                count++;
-                System.out.print(i + ", ");
-
-            }
-
+        for (int j = 2; j < i; j++ ){
+            if ( i%j == 0) {
+                res = false;}
         }
-        System.out.println("Count: " + count);
+        return res;
 
     }
+
+    public static void main(String[] args) {
+
+
+        int min = 2;
+        int max = 1000;
+        int count = 0;
+
+        long startTime = System.currentTimeMillis();
+
+        for (int i = min; i <= max; i++) {
+            if(isPrimeNumber(i)){
+                count ++;
+                //System.out.println(i);
+            }
+
+
+        }
+
+        long endTime = System.currentTimeMillis();
+        long seconds = (endTime - startTime)/1000;
+        System.out.println( seconds);
+
+        System.out.println("In range " + min + " - " + max + " are " + count + " prime numbers.");
+
+    }
+
+
 }
