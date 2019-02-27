@@ -10,17 +10,20 @@ public class Lesson1 {
         } else if (nr == 2 || nr == 3 || nr == 5) {
             prim = true;
 
-        //} else if (nr % 2 == 0 || nr % 3 == 0 || nr % 5 == 0 ) {
-        //    prim = false;
 
-            //System.out.println(nr);
+        }else if (nr % 2 == 0 || nr % 3 == 0 || nr % 5 == 0) {
+
+                prim = false;
+
+
 
         //} else if (nr % 2 != 0 && nr % 3 != 0 && nr % 5 != 0) {
-        }else if (nr != 2 || nr != 3 || nr != 5) {
-            for (int i = 2; i < nr/2; i++) {
-                //System.out.println(i);
+        //}else if (nr != 2 || nr != 3 || nr != 5) {
+        }else{
+            for (int i = 3; i <= Math.sqrt(nr); i+=2) {
+
                 if (nr % i == 0) {
-                    System.out.println(nr +" "+ i);
+
                     prim = false;
 
                 } //else

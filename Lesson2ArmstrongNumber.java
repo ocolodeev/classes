@@ -38,7 +38,7 @@ public class Lesson2ArmstrongNumber {
         int count = 0;
         System.out.println("Armstrong numbers in range " + min + " - " + max + " are listed below:");
 
-        for (int number = min + 1; number <= max; ++number) {
+        for (int number = min; number <= max; ++number) {
             if (armstrongNumber(number)) {
                 count++;
 
