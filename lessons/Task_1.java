@@ -1,22 +1,26 @@
 public class Task_1{
 
-    public static boolean isPrimeNumber(int i){
+    public static boolean isPrimeNumber(int number){
 
-        boolean res = true;
 
-        for (int j = 2; j < i; j++ ){
-            if ( i%j == 0) {
-                res = false;}
+        if (number>0 && number<3) return true;
+
+        if (number<0) return false;
+
+        for (int j = 3; j < Math.sqrt(number); j+=2 ){
+            if ( number%j == 0) {
+                return false;}
         }
-        return res;
+        return true;
 
     }
 
     public static void main(String[] args) {
 
+       // System.out.println(isPrimeNumber(-10));
 
         int min = 2;
-        int max = 1000;
+        int max = 50000;
         int count = 0;
 
         long startTime = System.currentTimeMillis();
@@ -31,10 +35,11 @@ public class Task_1{
         }
 
         long endTime = System.currentTimeMillis();
-        long seconds = (endTime - startTime)/1000;
+        long seconds = (endTime - startTime);
         System.out.println("Execution duration (sec): " + seconds);
 
         System.out.println("In range " + min + " - " + max + " are " + count + " prime numbers.");
+
 
     }
 
